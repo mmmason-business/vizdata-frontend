@@ -25,7 +25,7 @@
 					this.onResize();
 					setTimeout(() => {
 						window.scrollTo(0, 1);
-					}, 250);
+					}, 150);
 				}, 100);
 			},
 			onResize() {
