@@ -26,7 +26,7 @@
 					setTimeout(() => {
 						window.scrollTo(0, 1);
 					}, 250);
-				}, 250);
+				}, 100);
 			},
 			onResize() {
 				this.$refs.root.style.height = `${window.innerHeight}px`;
