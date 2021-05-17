@@ -6,12 +6,28 @@
 <script>
 	export default {
 		created() {
+			window.addEventListener(
+				'orientationchange',
+				this.onOrientationChange
+			);
 			window.addEventListener('resize', this.onResize);
 		},
 		destroy() {
+			window.removeEventListener(
+				'orientationchange',
+				this.onOrientationChange
+			);
 			window.removeEventListener('resize', this.onResize);
 		},
 		methods: {
+			onOrientationChange() {
+				setTimeout(() => {
+					this.onResize();
+					setTimeout(() => {
+						window.scrollTo(0, 1);
+					}, 500);
+				}, 500);
+			},
 			onResize() {
 				this.$refs.root.style.height = `${window.innerHeight}px`;
 				this.$refs.root.style.width = `${window.innerWidth}px`;

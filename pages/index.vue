@@ -9,6 +9,7 @@
 </script>
 <style lang="scss" scoped>
 	main#docucment {
+		background-color: black;
 		bottom: 0;
 		display: grid;
 		grid-template-columns: 1fr;
