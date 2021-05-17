@@ -22,7 +22,10 @@
 		methods: {
 			onOrientationChange() {
 				setTimeout(() => {
-					window.scrollTo(0, 1);
+					this.onResize();
+					setTimeout(() => {
+						window.scrollTo(0, 1);
+					}, 250);
 				}, 250);
 			},
 			onResize() {
