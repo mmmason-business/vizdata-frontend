@@ -22,11 +22,8 @@
 		methods: {
 			onOrientationChange() {
 				setTimeout(() => {
-					this.onResize();
-					setTimeout(() => {
-						window.scrollTo(0, 1);
-					}, 500);
-				}, 500);
+					window.scrollTo(0, 1);
+				}, 250);
 			},
 			onResize() {
 				this.$refs.root.style.height = `${window.innerHeight}px`;
